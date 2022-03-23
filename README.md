@@ -18,6 +18,7 @@ https://www.artec3d.com/3d-models/golden-column
 https://sketchfab.com/3d-models/skara-brae-orkney-house-2-e12c4389a6154bf5a72b74c34a1823b8
 
 Projekat sadrzi:
+
 Oblast A: Framebuffers, Cubemaps
 
 Oblast B: HDR, Bloom
