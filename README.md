@@ -8,11 +8,17 @@ MARIJA PAPOVIC 63/2019
 # Upustsvo 
 
 Main se nalazi u src/main.cpp
+
 ALT+SHIFT+F9 -> project_base -> run
+
 f1 - otvara ImGUI prizor za podesavanje svetla
+
 C - Ukljucuje i iskljucuje slobodno kretanje kamere
+
 F - Ukljucuje i iskljucuje flashlight
+
 ESCAPE - Iskljucuje aplikaciju
+
 W, A, S, D - Kretanje po sceni
 
 # MODELI:
