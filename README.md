@@ -1,9 +1,19 @@
+
 # RG_PROJEKAT
+Ovo je projekat iz Računarske grafike
 
 # AUTOR: 
-MARIJA PAPOVIC
+MARIJA PAPOVIC 63/2019
 
-Ovo je projekat iz Računarske grafike
+# Upustsvo 
+
+Main se nalazi u src/main.cpp
+ALT+SHIFT+F9 -> project_base -> run
+f1 - otvara ImGUI prizor za podesavanje svetla
+C - Ukljucuje i iskljucuje slobodno kretanje kamere
+F - Ukljucuje i iskljucuje flashlight
+ESCAPE - Iskljucuje aplikaciju
+W, A, S, D - Kretanje po sceni
 
 # MODELI:
 
@@ -25,15 +35,5 @@ Oblast A: Framebuffers, Cubemaps
 
 Oblast B: HDR, Bloom
 
-# Komande na tastaturi:
 
-f1 - otvara ImGUI prizor za podesavanje svetla
-
-C - Ukljucuje i iskljucuje slobodno kretanje kamere
-
-F - Ukljucuje i iskljucuje flashlight
-
-ESCAPE - Iskljucuje aplikaciju
-
-W, A, S, D - Kretanje po sceni
 
