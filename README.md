@@ -1,4 +1,7 @@
 # RG_PROJEKAT
+
+AUTOR: MARIJA PAPOVIC
+
 Ovo je projekat iz Računarske grafike
 
 MODELI:
@@ -20,6 +23,7 @@ Oblast A: Framebuffers, Cubemaps
 Oblast B: HDR, Bloom
 
 Komande na tastaturi:
+
 f1 - otvara ImGUI prizor za podesavanje svetla
 
 C - Ukljucuje i iskljucuje slobodno kretanje kamere
