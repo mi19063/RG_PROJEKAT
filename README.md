@@ -43,5 +43,9 @@ Oblast A: Framebuffers, Cubemaps
 
 Oblast B: HDR, Bloom
 
+# Demonstraciju projekta možete videti na sledećem linku:
+
+https://youtu.be/wFS5mESk8w8
+
 
 
