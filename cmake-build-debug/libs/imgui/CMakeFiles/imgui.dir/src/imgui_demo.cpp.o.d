@@ -1,8 +1,8 @@
 libs/imgui/CMakeFiles/imgui.dir/src/imgui_demo.cpp.o: \
- /home/marija/Downloads/projekat_RG-20220318T175643Z-001/projekat_RG/libs/imgui/src/imgui_demo.cpp \
+ /home/marija/Desktop/RG_PROJEKAT/libs/imgui/src/imgui_demo.cpp \
  /usr/include/stdc-predef.h \
- /home/marija/Downloads/projekat_RG-20220318T175643Z-001/projekat_RG/libs/imgui/include/imgui.h \
- /home/marija/Downloads/projekat_RG-20220318T175643Z-001/projekat_RG/libs/imgui/include/imconfig.h \
+ /home/marija/Desktop/RG_PROJEKAT/libs/imgui/include/imgui.h \
+ /home/marija/Desktop/RG_PROJEKAT/libs/imgui/include/imconfig.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/float.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h /usr/include/string.h \

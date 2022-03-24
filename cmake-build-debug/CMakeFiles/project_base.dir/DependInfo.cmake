@@ -8,14 +8,14 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/marija/Downloads/projekat_RG-20220318T175643Z-001/projekat_RG/src/main.cpp" "CMakeFiles/project_base.dir/src/main.cpp.o" "gcc" "CMakeFiles/project_base.dir/src/main.cpp.o.d"
+  "/home/marija/Desktop/RG_PROJEKAT/src/main.cpp" "CMakeFiles/project_base.dir/src/main.cpp.o" "gcc" "CMakeFiles/project_base.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/marija/Downloads/projekat_RG-20220318T175643Z-001/projekat_RG/cmake-build-debug/libs/glad/CMakeFiles/glad.dir/DependInfo.cmake"
-  "/home/marija/Downloads/projekat_RG-20220318T175643Z-001/projekat_RG/cmake-build-debug/CMakeFiles/STB_IMAGE.dir/DependInfo.cmake"
-  "/home/marija/Downloads/projekat_RG-20220318T175643Z-001/projekat_RG/cmake-build-debug/libs/imgui/CMakeFiles/imgui.dir/DependInfo.cmake"
+  "/home/marija/Desktop/RG_PROJEKAT/cmake-build-debug/libs/glad/CMakeFiles/glad.dir/DependInfo.cmake"
+  "/home/marija/Desktop/RG_PROJEKAT/cmake-build-debug/CMakeFiles/STB_IMAGE.dir/DependInfo.cmake"
+  "/home/marija/Desktop/RG_PROJEKAT/cmake-build-debug/libs/imgui/CMakeFiles/imgui.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

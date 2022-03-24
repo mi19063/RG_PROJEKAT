@@ -1,8 +1,8 @@
 libs/imgui/CMakeFiles/imgui.dir/src/imgui_impl_glfw.cpp.o: \
- /home/marija/Downloads/projekat_RG-20220318T175643Z-001/projekat_RG/libs/imgui/src/imgui_impl_glfw.cpp \
+ /home/marija/Desktop/RG_PROJEKAT/libs/imgui/src/imgui_impl_glfw.cpp \
  /usr/include/stdc-predef.h \
- /home/marija/Downloads/projekat_RG-20220318T175643Z-001/projekat_RG/libs/imgui/include/imgui.h \
- /home/marija/Downloads/projekat_RG-20220318T175643Z-001/projekat_RG/libs/imgui/include/imconfig.h \
+ /home/marija/Desktop/RG_PROJEKAT/libs/imgui/include/imgui.h \
+ /home/marija/Desktop/RG_PROJEKAT/libs/imgui/include/imconfig.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/float.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h /usr/include/string.h \
@@ -18,7 +18,7 @@ libs/imgui/CMakeFiles/imgui.dir/src/imgui_impl_glfw.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
  /usr/include/assert.h \
- /home/marija/Downloads/projekat_RG-20220318T175643Z-001/projekat_RG/libs/imgui/include/imgui_impl_glfw.h \
+ /home/marija/Desktop/RG_PROJEKAT/libs/imgui/include/imgui_impl_glfw.h \
  /usr/include/GLFW/glfw3.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
@@ -29,4 +29,4 @@ libs/imgui/CMakeFiles/imgui.dir/src/imgui_impl_glfw.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h /usr/include/GL/gl.h \
  /usr/include/GL/glext.h \
- /home/marija/Downloads/projekat_RG-20220318T175643Z-001/projekat_RG/libs/glad/include/KHR/khrplatform.h
+ /home/marija/Desktop/RG_PROJEKAT/libs/glad/include/KHR/khrplatform.h

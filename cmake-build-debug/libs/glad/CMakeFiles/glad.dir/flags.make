@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/marija/Downloads/projekat_RG-20220318T175643Z-001/projekat_RG/libs/glad/include
+C_INCLUDES = -I/home/marija/Desktop/RG_PROJEKAT/libs/glad/include
 
 C_FLAGS = -g
 
