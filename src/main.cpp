@@ -174,9 +174,21 @@ int main() {
     // -----------------------------
     glEnable(GL_DEPTH_TEST);
 
+    //cullFace======================================================================================
+    glEnable(GL_CULL_FACE);
+    glCullFace(GL_FRONT);
+    glFrontFace(GL_CW);
+    //======================================================================================
+    //Blending======================================================================================
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    //======================================================================================
+
     // build and compile shaders
     // _____________________________________________________________________________________________________
     Shader ourShader("resources/shaders/ourShader.vs", "resources/shaders/ourShader.fs");
+    //blending=========================================================================================
+    Shader blendingShader("resources/shaders/ourShader.vs", "resources/shaders/blending.fs");
     Shader skyboxShader("resources/shaders/skybox.vs", "resources/shaders/skybox.fs");
     Shader shaderBlur("resources/shaders/blur.vs", "resources/shaders/blur.fs");
     Shader shaderBloomFinal("resources/shaders/bloom_final.vs", "resources/shaders/bloom_final.fs");
@@ -349,6 +361,8 @@ int main() {
     // ____________________________________________________________________________________________
     ourShader.use();
     ourShader.setInt("diffuseTexture", 0);
+    blendingShader.use();
+    blendingShader.setInt("diffuseTexture", 0);
     shaderBlur.use();
     shaderBlur.setInt("image", 0);
     shaderBloomFinal.use();
@@ -475,7 +489,56 @@ int main() {
         modelFlower = glm::rotate(modelFlower,glm::radians(-90.0f), glm::vec3(0.0f ,0.0f, 1.0f));
         ourShader.setMat4("model", modelFlower);
         flowerModel.Draw(ourShader);
+
+        //Blending Shader light setup============================================================
+        blendingShader.use();
+        blendingShader.setMat4("projection", projection);
+        blendingShader.setMat4("view", view);
+        blendingShader.setVec3("viewPosition", programState->camera.Position);
+        blendingShader.setFloat("material.shininess", 32.0f);
+        // directional light
+        //________________________________________________________________________________________________
+        blendingShader.setVec3("dirLight.direction", programState->dirLightDir);
+        blendingShader.setVec3("dirLight.ambient", glm::vec3(programState->dirLightAmbDiffSpec.x));
+        blendingShader.setVec3("dirLight.diffuse", glm::vec3(programState->dirLightAmbDiffSpec.y));
+        blendingShader.setVec3("dirLight.specular", glm::vec3(programState->dirLightAmbDiffSpec.z));
+
+        blendingShader.setVec3("pointLights[0].position", glm::vec3(-2.9f ,1.0f+sin(time*2.0f)/4.0f, -3.5f));
+        blendingShader.setVec3("pointLights[0].ambient", pointLight.ambient);
+        blendingShader.setVec3("pointLights[0].diffuse", pointLight.diffuse);
+        blendingShader.setVec3("pointLights[0].specular", pointLight.specular);
+        blendingShader.setFloat("pointLights[0].constant", pointLight.constant);
+        blendingShader.setFloat("pointLights[0].linear", pointLight.linear);
+        blendingShader.setFloat("pointLights[0].quadratic", pointLight.quadratic);
+
+        blendingShader.setVec3("pointLights[1].position", glm::vec3(1.2f+ sin(time) ,2.0f+sin(time)/4.0f, -3.8f+cos(time)));
+        blendingShader.setVec3("pointLights[1].ambient", pointLight.ambient);
+        blendingShader.setVec3("pointLights[1].diffuse", pointLight.diffuse);
+        blendingShader.setVec3("pointLights[1].specular", pointLight.specular);
+        blendingShader.setFloat("pointLights[1].constant", pointLight.constant);
+        blendingShader.setFloat("pointLights[1].linear", pointLight.linear);
+        blendingShader.setFloat("pointLights[1].quadratic", pointLight.quadratic);
+
+        // spotLight
+        //________________________________________________________________________________________________
+        if (spotlightOn) {
+            blendingShader.setVec3("spotLight.position", programState->camera.Position);
+            blendingShader.setVec3("spotLight.direction", programState->camera.Front);
+            blendingShader.setVec3("spotLight.ambient", 0.0f, 0.0f, 0.0f);
+            blendingShader.setVec3("spotLight.diffuse", 1.0f, 1.0f, 1.0f);
+            blendingShader.setVec3("spotLight.specular", 1.0f, 1.0f, 1.0f);
+            blendingShader.setFloat("spotLight.constant", 1.0f);
+            blendingShader.setFloat("spotLight.linear", 0.09);
+            blendingShader.setFloat("spotLight.quadratic", 0.032);
+            blendingShader.setFloat("spotLight.cutOff", glm::cos(glm::radians(12.5f)));
+            blendingShader.setFloat("spotLight.outerCutOff", glm::cos(glm::radians(15.0f)));
+        }else{
+            blendingShader.setVec3("spotLight.diffuse", 0.0f, 0.0f, 0.0f);
+            blendingShader.setVec3("spotLight.specular", 0.0f, 0.0f, 0.0f);
+        }
+        //===========================================================================
         //draw pumpkin
+        ourShader.setBool("transparent",true);
         glm::mat4 modelPumpkin = glm::mat4(1.0f);
         modelPumpkin = glm::translate(modelPumpkin,glm::vec3(1.2f+ sin(time) ,2.0f+sin(time)/4.0f, -3.8f+cos(time)));
         modelPumpkin = glm::scale(modelPumpkin, glm::vec3(0.0015f));
@@ -483,6 +546,7 @@ int main() {
         modelPumpkin = glm::rotate(modelPumpkin,glm::radians(45.0f), glm::vec3(0.0f ,1.0f, 0.0f));
         ourShader.setMat4("model", modelPumpkin);
         pumpkinModel.Draw(ourShader);
+        blendingShader.setBool("transparent",false);
         //________________________________________________________________________________________
         // draw skybox
         //________________________________________________________________________________________
